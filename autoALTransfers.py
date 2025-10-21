@@ -6,8 +6,8 @@ import re
 ###
 
 # AL Transfers Import, save as Excel before running this script
-input_file = 'C:\\Users\\ibm0003\\Downloads\\TransferGuideSubmissions_10-20-25_09-11-30.xlsx' # Path to your Excel file
-output_file = 'C:\\Users\\ibm0003\\Downloads\\autoALTransfers.xlsx' # File to save results (can be same as input)
+input_file = 'C:\\path\\to\\Download\\ALTransfers.xlsx' # Path to your Excel file
+output_file = 'C:\\path\\to\\Download\\autoALTransfers.xlsx' # File to save results (can be same as input)
 
 # Mapping of college names to CEEB codes, in alphabetical order
 ceebCode = {
@@ -115,4 +115,5 @@ for row in ws.iter_rows(min_row=2):  # skip header row
 
 # Save the updated file
 wb.save(output_file)
+
 print(f"Done! Saved to '{output_file}'")
