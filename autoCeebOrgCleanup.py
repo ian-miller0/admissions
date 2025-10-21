@@ -1,8 +1,8 @@
 import openpyxl
 
 
-input_file = 'C:\\Users\\ibm0003\\Downloads\\QC - CEEB != Org CEEB (Non-Encoura_1 School Listed) 20251021-141111 - Copy.xlsx' # Path to your Excel file
-output_file = 'C:\\Users\\ibm0003\\Downloads\\autoNonEncouraCeebOrgCleanUp.xlsx' # File to save results (can be same as input)
+input_file = 'C:\\path\\to\\Download\\file.xlsx' # Path to your Excel file
+output_file = 'C:\\path\\to\\Download\\autoNonEncouraCeebOrgCleanUp.xlsx' # File to save results (can be same as input)
 
 # Load the workbook and worksheet
 wb = openpyxl.load_workbook(input_file)
@@ -40,4 +40,5 @@ for row in ws.iter_rows(min_row=2):  # skip header row
 
 # Save the modified workbook
 wb.save(output_file)
+
 print(f"Processed file saved as: {output_file}")
