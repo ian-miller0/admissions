@@ -6,8 +6,8 @@ import re
 ###
 
 # Net Price Calculator Excel Automation Script
-input_file = 'C:\\Users\\ibm0003\\Downloads\\LEADS_Rpt_UAH_20251016.xlsx' # Path Net Price file to be processed
-output_file = 'C:\\Users\\ibm0003\\Downloads\\autoNetPrice.xlsx' # File to save results
+input_file = 'C:\\path\\to\\Download\\netPriceFile.xlsx' # Path Net Price file to be processed
+output_file = 'C:\\path\\to\\Download\\autoNetPrice.xlsx' # File to save results
 
 # Load the workbook and worksheet
 wb = openpyxl.load_workbook(input_file)
@@ -76,4 +76,5 @@ for r in range(1, ws.max_row + 1):
 
 # Save the modified workbook
 wb.save(output_file)
+
 print(f"Processed file saved as: {output_file}")
